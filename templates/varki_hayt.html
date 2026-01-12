@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="hy">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/stylevarkihayt.css') }}">
+
+  <title>Վարկի հայտ</title>
+</head>
+
+<body>
+  <header>
+    <div class="header_1">
+      <a href="{{ url_for('index') }}" class="logo_a">
+        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo" class="logo">
+      </a>
+      <p class="p_phone"><i class="fa-solid fa-phone-volume"></i> 010 00 00 00 </p>
+      <p class="l_location"><i class="fa-solid fa-location-dot"></i> Արշակունյաց փ․ 16</p>
+      <label class="hreadlabel">
+        <input type="text" placeholder="Search" class="headinput">
+        <button id="but_search"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </label>
+    </div>
+
+    <div class="header_2">
+      <ul class="ul_menu">
+        <li><a href="{{ url_for('about') }}" class="a_menu">Մեր մասին</a></li>
+        <li><a href="{{ url_for('calculating') }}" class="a_menu">Վարկային հաշվիչ</a></li>
+        <li><a href="{{ url_for('varki_hayt') }}" class="a_menu">Վարկի հայտ</a></li>
+        <li><a href="{{ url_for('kap_mez_het') }}" class="a_menu">Կապ մեզ հետ</a></li>
+      </ul>
+      <div class="contact">
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-telegram"></i>
+        <i class="fa-brands fa-whatsapp"></i>
+      </div>
+    </div>
+  </header>
+
+  <div class="loan-container">
+    <h2>💳 Վարկի առցանց հայտ</h2>
+    <form id="loanForm">
+
+      <div class="form-group">
+        <label class="label_loan">Անուն Ազգանուն</label>
+        <input type="text" id="name" required>
+      </div>
+
+      <div class="form-group">
+        <label class="label_loan">Տարիք</label>
+        <input type="number" id="age" min="0" required>
+      </div>
+
+      <div class="form-group">
+        <label class="label_loan">Անձնագիր/ID</label>
+        <input type="text" id="passport" required>
+      </div>
+
+      <div class="form-group">
+        <label class="label_loan">Աշխատանքային ստաժ (տարի)</label>
+        <input type="number" id="employment_years" min="0" required>
+      </div>
+
+      <div class="form-group">
+        <label class="label_loan">Ամսական եկամուտ</label>
+        <input type="number" id="monthly_income" min="0" required>
+      </div>
+
+      <div class="form-group">
+        <label class="label_loan">Վարկային գնահատական (score)</label>
+        <input type="number" id="credit_score" min="0" required>
+      </div>
+
+      <div class="form-group">
+        <label class="label_loan">Պահանջվող վարկի չափ</label>
+        <input type="number" id="loan_amount" min="0" required>
+      </div>
+
+      <div class="form-group">
+        <label class="label_loan">Վարկի մարման ամիսներ</label>
+        <input type="number" id="loan_term_months" min="0" required>
+      </div>
+
+      <div class="form-group">
+        <label class="label_loan">Ընտանեկան ծախսեր</label>
+        <input type="number" id="monthly_expenses" min="0" required>
+      </div>
+
+      <div class="form-group">
+        <label class="label_loan">Այլ ակտիվ վարկերի մնացորդ</label>
+        <input type="number" id="other_loans_total" min="0" required>
+      </div>
+
+      <div class="form-group">
+        <label class="label_loan">Երաշխավորի առկայություն</label>
+        <select id="is_guaranteed">
+          <option value="" disabled selected>Ընտրել...</option>
+          <option value="1">Այո</option>
+          <option value="0">Ոչ</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label class="label_loan">Վարկի նպատակ</label>
+        <select id="loan_purpose">
+          <option value="" disabled selected>Ընտրել...</option>
+          <option value="hypothec">hypothec</option>
+          <option value="consumer">consumer</option>
+          <option value="agriculture">agriculture</option>
+          <option value="business">business</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label class="label_loan">Ընտանեկան կարգավիճակ</label>
+        <select id="marital_status">
+          <option value="" disabled selected>Ընտրել...</option>
+          <option value="single">single</option>
+          <option value="married">married</option>
+          <option value="divorced">divorced</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label class="label_loan">Բնակության մարզ</label>
+        <select id="region_code">
+          <option value="" disabled selected>Ընտրել...</option>
+          <option value="Aragatsotn">Aragatsotn</option>
+          <option value="Ararat">Ararat</option>
+          <option value="Armavir">Armavir</option>
+          <option value="Gegharkunik">Gegharkunik</option>
+          <option value="Kotayk">Kotayk</option>
+          <option value="Lori">Lori</option>
+          <option value="Shirak">Shirak</option>
+          <option value="Syunik">Syunik</option>
+          <option value="Tavush">Tavush</option>
+          <option value="Vayots Dzor">Vayots Dzor</option>
+          <option value="Yerevan">Yerevan</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label class="label_loan">Վերջին 1 ամսվա ուշացումներ</label>
+        <input type="number" id="late_payments_last_1m" min="0" required>
+      </div>
+
+      <button type="submit" class="submit-btn">✅ Հաստատել տվյալները</button>
+    </form>
+
+
+<div id="result">
+  {% if message %}
+    <h2 class="{% if 'հաստատված' in message %}approved{% else %}rejected{% endif %}">
+      {{ message }}
+    </h2>
+  {% endif %}
+</div>
+
+    <div id="retry" style="display:none; margin-top: 20px;">
+      <button onclick="window.location.href='/varki_hayt'" class="retry-btn">🔄 Փորձել կրկին</button>
+    </div>
+
+    <div id="document-upload" style="display: none;">
+      <h2>📑 Կցեք պահանջվող փաստաթղթերը</h2>
+      <form action="/upload_documents" method="POST" enctype="multipart/form-data">
+        <label>Անձնագիր/ID/Պետ․ ռեգիստր</label>
+        <input type="file" name="passport" required><br>
+        <label>Սոցիալական քարտ/ID</label>
+        <input type="file" name="soc_card" required><br>
+        <label>Բանկային քաղվածք</label>
+        <input type="file" name="bank_statement" required><br>
+        <label>Նկար</label>
+        <input type="file" name="picture" required><br>
+        <button type="submit" class="upload-btn">📤 Հաստատել փաստաթղթերը</button>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer_1">
+      <ul class="ul_foot1">
+        <h3 class="h3_title">Մեր մասին</h3>
+        <li class="li_foot1"><a href="">Ընկերության մասին</a></li>
+        <li class="li_foot1"><a href="">Նշանակալի մասնակիցներ</a></li>
+        <li class="li_foot1"><a href="">Ղեկավարներ</a></li>
+        <li class="li_foot1"><a href="">Կառուցվածք</a></li>
+        <li class="li_foot1"><a href="">Տեսլական</a></li>
+      </ul>
+
+      <ul class="ul_foot1">
+        <h3 class="h3_title">Վարվելակերպի կանոնակարգ</h3>
+        <li class="li_foot1"><a href="">Ծանոթագրություններ</a></li>
+        <li class="li_foot1"><a href="">Միջանկյալ ֆինանսական հաշվետվություններ</a></li>
+        <li class="li_foot1"><a href="">Տարեկան ֆինանսական հաշվետվություններ</a></li>
+        <li class="li_foot1"><a href="">Հիմնական տնտեսական նորմատիվներ</a></li>
+        <li class="li_foot1"><a href="">Տարեկան Ֆինանսական հաշվետվություն, անկախ աուդիտորի եզրակացություն</a>
+        </li>
+      </ul>
+
+      <ul class="ul_foot1">
+        <h3 class="h3_title">Հետադարձ կապ</h3>
+        <p class="p_phone"><i class="fa-solid fa-phone-volume"></i> 010 00 00 00 </p>
+        <p class="l_location"><i class="fa-solid fa-location-dot"></i> Արշակունյաց փ․ 16</p>
+        <li class="li_foot1 social_icons">
+          <div class="contact">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-telegram"></i>
+            <i class="fa-brands fa-whatsapp"></i>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="footer_2">
+      <img src="{{ url_for('static', filename='images/fin.png') }}" alt="" class="footimg">
+      <img src="{{ url_for('static', filename='images/kb.png') }}" alt="" class="footimg">
+      <img src="{{ url_for('static', filename='images/hash.png') }}" alt="" class="footimg">
+      <img src="{{ url_for('static', filename='images/abc.png') }}" alt="" class="footimg">
+    </div>
+  </footer>
+  <script src="{{ url_for('static', filename='js/scriptvarkihayt.js') }}"></script>
+</body>
+
+</html>

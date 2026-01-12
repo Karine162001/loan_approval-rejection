@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="hy">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Մեր մասին</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+  <!-- CSS from static/css -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styleabout.css') }}">
+</head>
+
+<body>
+  <header>
+    <div class="header_1">
+      <a href="{{ url_for('index') }}" class="logo_a">
+        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo" class="logo">
+      </a>
+      <p class="p_phone"><i class="fa-solid fa-phone-volume"></i> 010 00 00 00 </p>
+      <p class="l_location"><i class="fa-solid fa-location-dot"></i> Արշակունյաց փ․ 16</p>
+      <label>
+        <input type="text" placeholder="Search">
+        <button class="but_search"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </label>
+    </div>
+
+    <div class="header_2">
+      <ul class="ul_menu">
+        <li><a href="{{ url_for('about') }}" class="a_menu">Մեր մասին</a></li>
+        <li><a href="{{ url_for('calculating') }}" class="a_menu">Վարկային հաշվիչ</a></li>
+        <li><a href="{{ url_for('varki_hayt') }}" class="a_menu">Վարկի հայտ</a></li>
+        <li><a href="{{ url_for('kap_mez_het') }}" class="a_menu">Կապ մեզ հետ</a></li>
+      </ul>
+      <div class="contact">
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-telegram"></i>
+        <i class="fa-brands fa-whatsapp"></i>
+      </div>
+    </div>
+  </header>
+
+  <section class="about">
+    <div class="about-container">
+      <h2>Մեր մասին</h2>
+      <p>
+        <strong>FinCredit</strong>–ը հիմնադրվել է ավելի քան <strong>10 տարի առաջ</strong> և այսօր հանդիսանում է
+        Հայաստանի վարկային շուկայի վստահելի գործընկերներից մեկը։ Այս տարիների ընթացքում մենք ապահովել ենք ֆինանսական
+        հասանելիություն
+        հազարավոր ընտանիքների և բիզնեսների համար՝ տրամադրելով ավելի քան <strong>6100 վարկ</strong> և սպասարկելով շուրջ
+        <strong>6000 հաճախորդի</strong>։
+      </p>
+      <p>
+        Մեր նպատակն է ոչ միայն առաջարկել ֆինանսական լուծումներ, այլև աջակցել մեր հաճախորդների զարգացմանը և
+        կայունությանը։ Մենք հավատում ենք, որ վստահությունը, թափանցիկությունը և պրոֆեսիոնալիզմը այն հիմքերն են, որոնց վրա
+        կառուցվում է երկարաժամկետ համագործակցությունը։
+      </p>
+
+      <h2>Մեր առաքելությունը</h2>
+      <ul class="mission">
+        <li>Ապահովել ֆինանսական հասանելիություն յուրաքանչյուրին՝ անկախ եկամտի չափից։</li>
+        <li>Աջակցել հաճախորդներին իրենց նպատակների իրագործման ճանապարհին։</li>
+        <li>Ստեղծել վստահելի և թափանցիկ հարաբերություններ։</li>
+        <li>Ներդրում կատարել Հայաստանի տնտեսության զարգացման գործում։</li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="staff">
+    <h2>FinCredit-ի ղեկավարները</h2>
+    <p class="p_textforstaff">
+      Մեր թիմը երիտասարդ է և դինամիկ զարգացող: Մեր փորձագետները ունեն հարուստ գիտելիքներ ֆինանսական վերլուծության ոլորտում՝ հիմնվելով ՎԶԵԲ-ի մոտեցման, ինչպես նաև փոքր և միջին ձեռնարկությունների վարկավորման երկար տարիների փորձի վրա:
+    </p>
+
+    <h2>Տնօրենների խորհուրդ</h2>
+    <div class="staffxek">
+      <div class="itemxek">
+        <img src="{{ url_for('static', filename='images/1.jpg') }}" alt="">
+        <h3>Անգելինա Գրիգորյան</h3>
+        <p class="p_11">Տնօրենների խորհրդի նախագահ</p>
+      </div>
+      <div class="itemxek">
+        <img src="{{ url_for('static', filename='images/8.jpg') }}" alt="">
+        <h3>Ջոն Կարապետյան</h3>
+        <p class="p_11">Տնօրենների խորհրդի անդամ</p>
+      </div>
+      <div class="itemxek">
+        <img src="{{ url_for('static', filename='images/4.jpg') }}" alt="">
+        <h3>Ալեքս Սիմոնյան</h3>
+        <p class="p_11">Տնօրենների խորհրդի անդամ</p>
+      </div>
+    </div>
+
+    <div class="tnoren">
+      <h2>Ղեկավարություն</h2>
+      <div class="tnorenitem">
+        <div class="staffxek">
+          <div class="itemxek">
+            <img src="{{ url_for('static', filename='images/2.jpg') }}" alt="">
+            <h3>Միլենա Գաբրիելյան</h3>
+            <p class="p_11">Վարչության նախագահ - գործադիր տնօրեն</p>
+          </div>
+          <div class="itemxek">
+            <img src="{{ url_for('static', filename='images/3.jpg') }}" alt="">
+            <h3>Նարե Հակոբյան</h3>
+            <p class="p_11">Վարչության անդամ - Գլխավոր հաշվապահ</p>
+          </div>
+          <div class="itemxek">
+            <img src="{{ url_for('static', filename='images/5.jpg') }}" alt="">
+            <h3>Դանիել Սարգսյան</h3>
+            <p class="p_11">Վարչության անդամ - Ռիսկերի դեպարտամենտի ղեկավար</p>
+          </div>
+          <div class="itemxek">
+            <img src="{{ url_for('static', filename='images/7.jpg') }}" alt="">
+            <h3>Կարեն Սիմոնյան</h3>
+            <p class="p_11">Վերստուգող</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer_1">
+      <ul class="ul_foot1">
+        <h3 class="h3_title">Մեր մասին</h3>
+        <li class="li_foot1"><a href="">Ընկերության մասին</a></li>
+        <li class="li_foot1"><a href="">Նշանակալի մասնակիցներ</a></li>
+        <li class="li_foot1"><a href="">Ղեկավարներ</a></li>
+        <li class="li_foot1"><a href="">Կառուցվածք</a></li>
+        <li class="li_foot1"><a href="">Տեսլական</a></li>
+      </ul>
+
+      <ul class="ul_foot1">
+        <h3 class="h3_title">Վարվելակերպի կանոնակարգ</h3>
+        <li class="li_foot1"><a href="">Ծանոթագրություններ</a></li>
+        <li class="li_foot1"><a href="">Միջանկյալ ֆինանսական հաշվետվություններ</a></li>
+        <li class="li_foot1"><a href="">Տարեկան ֆինանսական հաշվետվություններ</a></li>
+        <li class="li_foot1"><a href="">Հիմնական տնտեսական նորմատիվներ</a></li>
+        <li class="li_foot1"><a href="">Տարեկան Ֆինանսական հաշվետվություն, անկախ աուդիտորի եզրակացություն</a></li>
+      </ul>
+
+      <ul class="ul_foot1">
+        <h3 class="h3_title">Հետադարձ կապ</h3>
+        <p class="p_phone"><i class="fa-solid fa-phone-volume"></i> 010 00 00 00 </p>
+        <p class="l_location"><i class="fa-solid fa-location-dot"></i> Արշակունյաց փ․ 16</p>
+        <li class="li_foot1 social_icons">
+          <div class="contact">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-telegram"></i>
+            <i class="fa-brands fa-whatsapp"></i>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="footer_2">
+      <img src="{{ url_for('static', filename='images/fin.png') }}" alt="" class="footimg">
+      <img src="{{ url_for('static', filename='images/kb.png') }}" alt="" class="footimg">
+      <img src="{{ url_for('static', filename='images/hash.png') }}" alt="" class="footimg">
+      <img src="{{ url_for('static', filename='images/abc.png') }}" alt="" class="footimg">
+    </div>
+  </footer>
+
+</body>
+</html>

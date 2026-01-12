@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="hy">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/stylethanks.css') }}">
+    <title>Շնորհակալություն</title>
+</head>
+<body>
+    <header>
+        <div class="header_1">
+            <a href="{{ url_for('index') }}" class="logo_a">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo" class="logo">
+            </a>
+            <p class="p_phone"><i class="fa-solid fa-phone-volume"></i> 010 00 00 00 </p>
+            <p class="l_location"><i class="fa-solid fa-location-dot"></i> Արշակունյաց փ․ 16</p>
+            <label>
+                <input type="text" placeholder="Search" class="headinput">
+                <button id="but_search"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </label>
+        </div>
+
+        <div class="header_2">
+      <ul class="ul_menu">
+        <li><a href="{{ url_for('about') }}" class="a_menu">Մեր մասին</a></li>
+        <li><a href="{{ url_for('calculating') }}" class="a_menu">Վարկային հաշվիչ</a></li>
+        <li><a href="{{ url_for('varki_hayt') }}" class="a_menu">Վարկի հայտ</a></li>
+        <li><a href="{{ url_for('kap_mez_het') }}" class="a_menu">Կապ մեզ հետ</a></li>
+      </ul>
+            <div class="contact">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-telegram"></i>
+                <i class="fa-brands fa-whatsapp"></i>
+            </div>
+        </div>
+    </header>
+
+<body>
+    <div class="thanks">
+        <h2>✅ Շնորհակալություն մեր ծառայություններից օգտվելու համար!</h2>
+        <p>Ձեր հաղորդագրությունը հաջողությամբ ուղարկվեց։ Մեր մասնագետները կապ կհաստատեն Ձեր հետ։</p>
+        <br>
+        <a href="{{ url_for('index') }}">⬅ Վերադառնալ գլխավոր էջ</a>
+    </div>
+
+
+  <footer>
+    <div class="footer_1">
+      <ul class="ul_foot1">
+        <h3 class="h3_title">Մեր մասին</h3>
+        <li class="li_foot1"><a href="">Ընկերության մասին</a></li>
+        <li class="li_foot1"><a href="">Նշանակալի մասնակիցներ</a></li>
+        <li class="li_foot1"><a href="">Ղեկավարներ</a></li>
+        <li class="li_foot1"><a href="">Կառուցվածք</a></li>
+        <li class="li_foot1"><a href="">Տեսլական</a></li>
+      </ul>
+
+      <ul class="ul_foot1">
+        <h3 class="h3_title">Վարվելակերպի կանոնակարգ</h3>
+        <li class="li_foot1"><a href="">Ծանոթագրություններ</a></li>
+        <li class="li_foot1"><a href="">Միջանկյալ ֆինանսական հաշվետվություններ</a></li>
+        <li class="li_foot1"><a href="">Տարեկան ֆինանսական հաշվետվություններ</a></li>
+        <li class="li_foot1"><a href="">Հիմնական տնտեսական նորմատիվներ</a></li>
+        <li class="li_foot1"><a href="">Տարեկան Ֆինանսական հաշվետվություն, անկախ աուդիտորի եզրակացություն</a></li>
+      </ul>
+
+      <ul class="ul_foot1">
+        <h3 class="h3_title">Հետադարձ կապ</h3>
+        <p class="p_phone"><i class="fa-solid fa-phone-volume"></i> 010 00 00 00 </p>
+        <p class="l_location"><i class="fa-solid fa-location-dot"></i> Արշակունյաց փ․ 16</p>
+        <li class="li_foot1 social_icons">
+          <div class="contact">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-telegram"></i>
+            <i class="fa-brands fa-whatsapp"></i>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="footer_2">
+      <img src="{{ url_for('static', filename='images/fin.png') }}" alt="" class="footimg">
+      <img src="{{ url_for('static', filename='images/kb.png') }}" alt="" class="footimg">
+      <img src="{{ url_for('static', filename='images/hash.png') }}" alt="" class="footimg">
+      <img src="{{ url_for('static', filename='images/abc.png') }}" alt="" class="footimg">
+    </div>
+  </footer>
+  
+</body>
+</html>
